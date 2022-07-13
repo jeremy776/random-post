@@ -1,5 +1,9 @@
 {
   "private": true,
+  "name": "randpost",
+  "author": {
+    "name": "Jeremy"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
