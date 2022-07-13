@@ -25,6 +25,7 @@ export default function NavLink({name, href, icon, isActive}: NavLinkProps) {
                 color={isActive ? 'gray.100' : 'gray.600'}
                 alignItems={'center'}
                 justifyContent={{base: 'center', md: 'start'}}
+                transition={'all 0.4s ease'}
                 fontSize={{base: 'xl', md: 'medium'}}
                 gap={5}
                 _hover={{
