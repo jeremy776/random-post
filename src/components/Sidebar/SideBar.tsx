@@ -5,12 +5,23 @@ import {
     Heading
 } from "@chakra-ui/react";
 import NavLink from "./NavLink";
+import{
+    useRouter
+} from 'next/router';
+
+import {
+    FiHome,
+    FiLogIn
+} from 'react-icons/fi';
 
 interface SideBarProps extends BoxProps {
     onClose?: () => void;
 }
 
 export default function SideBar({onClose, ...base}: SideBarProps) {
+    const router = useRouter();
+    const path = router.asPath;
+    
     return (
         <Box
             bg={'gray.900'}
@@ -27,7 +38,7 @@ export default function SideBar({onClose, ...base}: SideBarProps) {
                 justifyContent={'space-between'}
                 alignItems={'center'}
             >
-                <Heading fontSize={'xl'}>....</Heading>
+                <Heading fontSize={'xl'}>Randpost</Heading>
                 <CloseButton color={'gray.400'} display={{md:'none'}} onClick={onClose} />
             </Box>
             
@@ -38,7 +49,7 @@ export default function SideBar({onClose, ...base}: SideBarProps) {
                 flexDirection={'column'}
             >
                 {links.map((x,i) => (
-                    <NavLink key={i} href={x.href} name={x.name} />
+                    <NavLink isActive={path == x.href} icon={x.icon} key={i} href={x.href} name={x.name} />
                 ))}
             </Box>
         </Box>
@@ -47,11 +58,13 @@ export default function SideBar({onClose, ...base}: SideBarProps) {
 
 let links = [
     {
-        name: 'Beranda',
-        href: '/'
+        name: 'Home',
+        href: '/',
+        icon: FiHome
     },
     {
         name: 'Login',
-        href: '#'
+        href: '/login',
+        icon: FiLogIn
     }
 ]

@@ -13,4 +13,4 @@ const Index = () => (
   </Box>
 )
 
-export default Index
+export default Index;

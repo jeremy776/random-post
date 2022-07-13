@@ -9,7 +9,7 @@ export default function NavbarDesk({...base}) {
             w={'full'}
             {...base}
         >
-            <Heading fontSize={'xl'}>.....</Heading>
+            <Heading fontSize={'xl'}>Randpost</Heading>
         </Box>
     )
 }
