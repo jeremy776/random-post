@@ -14,6 +14,8 @@ import {
     FiLogIn
 } from 'react-icons/fi';
 
+import pathD from '../../path-docs';
+
 interface SideBarProps extends BoxProps {
     onClose?: () => void;
 }
@@ -39,7 +41,7 @@ export default function SideBar({onClose, ...base}: SideBarProps) {
                 justifyContent={'space-between'}
                 alignItems={'center'}
             >
-                <Heading fontSize={'xl'}>Randpost</Heading>
+                <Heading fontSize={'xl'}>Docs</Heading>
                 <CloseButton color={'gray.400'} display={{md:'none'}} onClick={onClose} />
             </Box>
             
@@ -49,23 +51,10 @@ export default function SideBar({onClose, ...base}: SideBarProps) {
                 display={'flex'}
                 flexDirection={'column'}
             >
-                {links.map((x,i) => (
-                    <NavLink isActive={path == x.href} icon={x.icon} key={i} href={x.href} name={x.name} />
+                {pathD.map((x,i) => (
+                    <NavLink isActive={path == x.href} key={i} href={x.href} name={x.name} />
                 ))}
             </Box>
         </Box>
     )
 }
-
-let links = [
-    {
-        name: 'Home',
-        href: '/',
-        icon: FiHome
-    },
-    {
-        name: 'Login',
-        href: '/login',
-        icon: FiLogIn
-    }
-]

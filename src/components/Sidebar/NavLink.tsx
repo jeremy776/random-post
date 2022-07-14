@@ -11,11 +11,10 @@ import { IconType } from 'react-icons';
 interface NavLinkProps extends BoxProps {
     name: string;
     href: string;
-    icon: IconType;
     isActive: Boolean;
 }
 
-export default function NavLink({name, href, icon, isActive}: NavLinkProps) {
+export default function NavLink({name, href, isActive}: NavLinkProps) {
     return (
         <Link href={href}>
             <Box
@@ -40,7 +39,6 @@ export default function NavLink({name, href, icon, isActive}: NavLinkProps) {
                     color: 'gray.300'
                 }}
             >
-                {icon && <Icon as={icon} />}
                 <Text>{name}</Text>
             </Box>
         </Link>

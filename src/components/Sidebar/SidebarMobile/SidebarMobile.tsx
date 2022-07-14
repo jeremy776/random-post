@@ -34,7 +34,7 @@ export default function SidebarMobile() {
                 alignItems={'center'}
             >
                 <Box>
-                    <Heading fontSize={'xl'}>Randpost</Heading>
+                    <Heading fontSize={'xl'}>Docs</Heading>
                 </Box>
 
                 <Box>

@@ -1,5 +1,8 @@
 import { extendTheme } from '@chakra-ui/react'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
+import {
+  withProse
+} from '@nikolovlazar/chakra-ui-prose';
 
 const fonts = { mono: `'Menlo', monospace` }
 
@@ -15,19 +18,11 @@ const theme = extendTheme({
     initialColorMode: 'dark',
     useSystemColorMode: false
   },
-  semanticTokens: {
-    colors: {
-      text: {
-        default: '#16161D',
-        _dark: '#ade3b8',
-      }
-    },
-  },
   colors: {
     black: '#16161D',
   },
   fonts,
   breakpoints,
-})
+}, withProse())
 
 export default theme
