@@ -11,8 +11,7 @@ import Head from '../components/Head';
 import Sidebar from '../components/Sidebar/Main';
 import Wrapper from '../components/Wrapper';
 
-export default function Index({ post }) {
-  console.log(post)
+export default function Index() {
   return (
     <Box
       h={'100vh'}
@@ -23,9 +22,9 @@ export default function Index({ post }) {
       <Container>
 
         <Wrapper>
-          <Card text='hello whatsapp' />
-          <Card text='hello whatsapp' />
-          <Card text='hello whatsapp' />
+          {data.map((x, i) => (
+            <Card key={i} text={x.text} />
+          ))}
         </Wrapper>
 
       </Container>
@@ -34,3 +33,30 @@ export default function Index({ post }) {
     </Box>
   )
 }
+
+
+let data = [
+  {
+    text: 'yoi'
+  },
+  {
+    text: 'ok'
+  }, {
+    text: 'ok'
+  },
+  {
+    text: 'ok'
+  },
+  {
+    text: 'ok'
+  },
+  {
+    text: 'ok'
+  },
+  {
+    text: 'ok'
+  },
+  {
+    text: 'ok'
+  }
+]

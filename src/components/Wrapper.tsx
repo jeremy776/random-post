@@ -8,7 +8,7 @@ export default function Wrapper({children, ...style}) {
             display={'flex'}
             flexWrap={'wrap'}
             gap={2}
-            bg={'gray.300'}
+            cursor={'pointer'}
             p={4}
             w={'full'}
             {...style}

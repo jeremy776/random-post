@@ -25,7 +25,7 @@ export default function SideBar({onClose, ...base}: SideBarProps) {
     return (
         <Box
             bg={'gray.900'}
-            px={5}
+            // px={5}
             py={5}
             h={'full'}
             w={{base: 'full', md: 60}}
@@ -35,6 +35,7 @@ export default function SideBar({onClose, ...base}: SideBarProps) {
             {/* Title */}
             <Box
                 display={'flex'}
+                px={5}
                 justifyContent={'space-between'}
                 alignItems={'center'}
             >

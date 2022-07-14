@@ -23,6 +23,14 @@ export default function NavLink({name, href, icon, isActive}: NavLinkProps) {
                 cursor={'pointer'}
                 fontWeight={'medium'}
                 color={isActive ? 'gray.100' : 'gray.600'}
+                
+                px={{md: 5}}
+                py={{md: 2}}
+                borderRightRadius={{md: '5px'}}
+                bg={{md: isActive ? 'whiteAlpha.100' : null}}
+                borderLeftWidth={{md: isActive ? 3 : 0}}
+                borderLeftColor={{md: isActive ? 'cyan.300' : null}}
+
                 alignItems={'center'}
                 justifyContent={{base: 'center', md: 'start'}}
                 transition={'all 0.4s ease'}
