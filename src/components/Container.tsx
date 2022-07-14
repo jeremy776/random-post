@@ -3,11 +3,12 @@ import {
 } from '@chakra-ui/react';
 
 
-export default function Container({ children }) {
+export default function Container({ children, ...b }) {
     return (
         <Box
-            px={{ base: 3, md: 72 }}
-            py={{ base: 4, md: 25 }}
+            pl={{ base: 0, md: 60 }}
+            w={'100%'}
+            {...b}
         >
             {children}
         </Box>
