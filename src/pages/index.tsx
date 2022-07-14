@@ -1,6 +1,8 @@
 import {
   Box,
   Drawer,
+  Text,
+  Avatar
 } from '@chakra-ui/react';
 import Container from '../components/Container';
 import Head from '../components/Head';
@@ -28,7 +30,25 @@ const Index = () => (
           borderColor: 'cyan.400'
         }}
       >
-        <p>ij</p>
+        <Box
+          display={"flex"}
+          gap={3}
+        >
+          <Box>
+            <Avatar size={"sm"} src={"...."} alt={"ok"} />
+          </Box>
+          <Box>
+            <Text fontWeight={"bold"} color={"gray.400"} fontSize={"sm"}>Anonymous</Text>
+            <Text fontSize={"10px"} fontWeight={"medium"} color={"gray.500"}>12 Februari 2022 - 09:17 WIB</Text>
+          </Box>
+        </Box>
+        
+        <Box>
+          <Text mt={4} color={"gray.300"} fontSize={"xs"}>
+            Just test
+          </Text>
+          
+        </Box>
       </Box>
 
     </Container>
